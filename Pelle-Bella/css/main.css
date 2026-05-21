@@ -101,7 +101,7 @@ button {
     /* Tamanho da fonte do botão */
     font-size: 14px;
     /* Cor de fundo do botão usando varável gold-dark */
-    background-color: var(--gold-dark);
+    background-color: var(--primary);
     /* Remove borda padrão */
     border: none;
     /* Espaçamento interno do botão (vertical horizontal) */
@@ -127,10 +127,10 @@ button:hover {
 /* Usa Playfair Display para sensação serifada e elegante */
 h1 {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
-    /* Cor dourada escura para destaque */
-    color: var(--gold-dark);
+    color: var(--foreground);
+    margin-bottom: 8px;
 }
 
 /* Links padrão */
@@ -142,6 +142,7 @@ a {
     /* Transição suave para mudança de cor */
     transition: color 0.3s ease;
 }
+
 
 /* ===== Navegação principal ===== */
 .nav-seccoes {
@@ -234,4 +235,68 @@ a {
     text-decoration: none;
     /* Força o texto para ficar como o fundo (para botões escuros) */
     color: var(--background);
+}
+
+footer {
+  background-color: var(--sidebar-foreground);
+  color: var(--sidebar);
+  padding: 60px 40px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+footer section {
+  flex: 1 1 220px;
+}
+
+footer h2 {
+  color: var(--gold-dark);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 8px;
+}
+
+footer ul li a {
+  color: var(--sidebar);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: var(--gold-dark);
+}
+
+footer a i {
+  color: var(--gold-dark);
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+footer aside {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+footer aside img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
