@@ -1,0 +1,126 @@
+@supports (color:lab(0% 0 0)) {
+    :root {
+        /* Cor de fundo do site */
+        --background: lab(98.84% .0000298023 -.0000119209);
+        /* Cor padrão do texto (foreground) */
+        --foreground: lab(7.22637% -.0000149012 0);
+        /* Cor dos cartões / blocos */
+        --card: lab(100% 0 0);
+        /* Cor do texto dentro de cartões */
+        --card-foreground: lab(7.22637% -.0000149012 0);
+        /* Cor de popovers (modais/flutuantes) */
+        --popover: lab(100% 0 0);
+        /* Cor do texto dentro de popovers */
+        --popover-foreground: lab(7.22637% -.0000149012 0);
+        /* Cor primária usada em destaques */
+        --primary: lab(71.2019% 8.24577 52.3464);
+        /* Cor do texto quando sobre o primário */
+        --primary-foreground: lab(7.27453% 1.01619 6.17766);
+        /* Cor secundária de apoio */
+        --secondary: lab(96.5601% .286847 3.81331);
+        /* Cor do texto quando sobre a secundária */
+        --secondary-foreground: lab(18.8% 0 0);
+        /* Cor para elementos menos destacados (muted) */
+        --muted: lab(95.36% 0 0);
+        /* Texto para elementos muted */
+        --muted-foreground: lab(42% 0 0);
+        /* Cor de acento (usada para contrastes) */
+        --accent: lab(82.8129% 4.16073 32.279);
+        /* Texto sobre o acento */
+        --accent-foreground: lab(13% 0 0);
+        /* Cor para estados destrutivos (ex: deletar) */
+        --destructive: lab(48.4493% 77.4328 61.5452);
+        /* Texto sobre estados destrutivos */
+        --destructive-foreground: lab(48.4493% 77.4328 61.5452);
+        /* Cor de bordas */
+        --border: lab(88.4762% .642717 7.67483);
+        /* Cor de fundo de inputs */
+        --input: lab(90.72% .0000298023 -.0000119209);
+        /* Cor para “ring” de foco */
+        --ring: lab(71.2019% 8.24577 52.3464);
+        /* Cores para gráficos (diversas séries) */
+        --chart-1: lab(71.2019% 8.24577 52.3464);
+        --chart-2: lab(55.0223% -41.0774 -3.90277);
+        --chart-3: lab(30.372% -13.1853 -18.7887);
+        --chart-4: lab(80.1641% 16.6016 99.2089);
+        --chart-5: lab(72.7183% 31.8672 97.9407);
+        /* Cores específicas da sidebar */
+        --sidebar: lab(98.26% 0 0);
+        --sidebar-foreground: lab(2.75381% 0 0);
+        --sidebar-primary: lab(71.2019% 8.24577 52.3464);
+        --sidebar-primary-foreground: lab(7.27453% 1.01619 6.17766);
+        --sidebar-accent: lab(96.52% -.0000298023 .0000119209);
+        --sidebar-accent-foreground: lab(7.78201% -.0000149012 0);
+        --sidebar-border: lab(90.952% 0 -.0000119209);
+        --sidebar-ring: lab(66.128% -.0000298023 .0000119209);
+        /* Paleta ouro/rosa personalizada */
+        --gold: lab(71.2019% 8.24577 52.3464);
+        --gold-light: lab(82.8129% 4.16073 32.279);
+        --gold-dark: lab(53.7345% 9.37668 56.8433);
+        --pink: lab(69.3922% 38.9471 -7.4692);
+        --pink-light: lab(87.6% 19.7857 -3.75594);
+        --pink-dark: lab(51.5806% 48.0324 -9.28907);
+    }
+}
+
+.resultados-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Estrutura do Card */
+.card {
+    background-color: var(--card);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que os cantos arredondados afetem a imagem */
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: auto;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--gold-light);
+}
+
+/* Estilização da Imagem */
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcer */
+}
+
+/* Conteúdo do Card (Texto e Botão) */
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    color: var(--card-title);
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: var(--card-description);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.p-description {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background-color: var(--gold-light);
+  color: var(--gold-dark);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
