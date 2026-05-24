@@ -134,7 +134,6 @@ h1 {
 }
 
 
-
 /* Links padrão */
 a {
     /* Remove sublinhado padrão */
@@ -144,6 +143,8 @@ a {
     /* Transição suave para mudança de cor */
     transition: color 0.3s ease;
 }
+
+
 
 footer {
     background-color: var(--sidebar-foreground);
@@ -227,6 +228,27 @@ footer .footer-copyright {
   color: color-mix(in oklab, var(--sidebar) 70%, transparent 30%);
   font-size: 14px;
   order: 999;
+}
+
+.note-card {
+  background-color: color-mix(in oklab, var(--muted) 80%, var(--border));
+  padding: 24px 32px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.note-card p {
+  color: color-mix(in oklab, var(--foreground) 65%, transparent 35%);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.note-card strong {
+  color: var(--foreground);
+  font-weight: 600;
 }
 
 /* ===== Navegação principal ===== */
