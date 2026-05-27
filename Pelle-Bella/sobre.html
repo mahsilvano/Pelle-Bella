@@ -4,8 +4,325 @@
     <meta charset="UTF-8">
     <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós | Pelle Bella</title>
+
+    <style>
+
+body{
+    overflow-x: hidden;
+}
+
+.sobre-container{
+    width: min(100%, 1400px);
+    margin: 0 auto;
+    padding: 100px 8%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.sobre-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.sobre-texto h2{
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: #b58b2d;
+}
+
+.titulo-rosa{
+    color: #cf6f9d !important;
+}
+
+.sobre-texto p{
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.sobre-numeros{
+    display: flex;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.sobre-numeros h3{
+    font-size: 2rem;
+    color: #c79b37;
+    margin-left: center;
+}
+
+.sobre-numeros span{
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: center;
+}
+
+.sobre-numeros.rosa h3{
+    color: #d86d9f;
+    margin-left: center;
+}
+
+/* CARDS */
+
+.sobre-card{
+    height: 500px;
+    min-height: 320px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-bege{
+    background: #eee6d6;
+}
+
+.card-rosa{
+    background: #f3ddea;
+}
+
+.sobre-logo{
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-bege .sobre-logo{
+    background: #f5eddc;
+    color: #c79b37;
+}
+
+.card-rosa .sobre-logo{
+    background: #f6cade;
+    color: #d86d9f;
+}
+
+.sobre-card h3{
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.sobre-card p{
+    color: #555;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px){
+
+    .sobre-container{
+        padding: 60px 6%;
+        gap: 80px;
+    }
+
+    .sobre-grid{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .sobre-texto{
+        width: 100%;
+    }
+
+    .sobre-texto h2{
+        font-size: 2.2rem;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+
+    .sobre-texto p{
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .sobre-card{
+        width: 100%;
+        height: 300px;
+    }
+
+    .sobre-logo{
+        width: 80px;
+        height: 80px;
+        font-size: 1.7rem;
+    }
+
+    .sobre-numeros{
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .sobre-numeros h3{
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 900px){
+
+    .header{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .nav-seccoes{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-seccoes li a{
+        font-size: 0.9rem;
+    }
+
+    .header button{
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* ===================================
+   CORREÇÃO GLOBAL MOBILE
+=================================== */
+
+html,
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 900px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .header{
+        width: 100%;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-bar{
+        width: 100%;
+    }
+
+    .nav-seccoes{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .page-hero{
+        width: 100%;
+        padding: 60px 8%;
+    }
+
+    .page-hero h1{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .page-hero h3,
+    .page-hero p{
+        text-align: center;
+    }
+
+    .sobre-container{
+        width: 100%;
+        padding: 60px 7%;
+        gap: 80px;
+    }
+
+    .sobre-grid{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .reverse{
+        flex-direction: column-reverse;
+    }
+
+    .sobre-texto{
+        width: 100%;
+    }
+
+    .sobre-texto h2{
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .sobre-texto p{
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .sobre-card{
+        width: 100%;
+        min-height: 300px;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .sobre-numeros{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        text-align: center;
+    }
+
+    footer{
+        width: 100%;
+        padding: 50px 7%;
+    }
+
+    footer section{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+</style>
 
 </head>
 <body>
@@ -31,43 +348,109 @@
                  <button><a class="cta-color" href="contato.html">Agendar Consulta</a></button>
     </header>
 
-        <main class="-1">
-    <h3>Nossa História</h3>
-    <h1>Sobre Nós</h1>
-        <a>Conheça a história das empresas que cuidam da sua beleza e bem-estar há mais de uma década.</a>
-    </main>
+        <main class="page-hero">
+          <h3>Nossa História</h3>
+          <h1>Sobre Nós</h1>
+          <p>Conheça a história das empresas que cuidam da sua beleza e bem-estar há mais de uma década.</p>
+        </main>
 
-    <section class="">
-    <h2>Pelle Bella</h2>
-        <a>A Pelle Bella nasceu em 2014 com o sonho de oferecer tratamentos estéticos de alta qualidade em um ambiente acolhedor e profissional. Fundada por profissionais apaixonados pela estética, nossa clínica se tornou referência na região.</a>
+<section class="sobre-container">
 
-        <a>Ao longo dos anos, investimos constantemente em tecnologia, formação e atualização de nossa equipe, garantindo que nossos clientes tenham acesso aos tratamentos mais modernos e eficazes do mercado.</a>
+    <!-- BLOCO 1 -->
+    <div class="sobre-grid">
 
-        <a>Nossa missão é proporcionar bem-estar e autoestima através de tratamentos personalizados, sempre respeitando a individualidade de cada cliente.</a><br> 
+        <div class="sobre-texto">
+            <h2>Pelle Bella</h2>
 
-        <p>10+ Anos</p>
-        <p>5000+ Clientes</p>
-        <p>15+ Certificações</p><br>
-    </section>
+            <p>
+             A Pelle Bella nasceu em 2014 com o sonho de oferecer tratamentos estéticos de alta qualidade em um ambiente acolhedor e profissional. Fundada por profissionais apaixonados pela estética, nossa clínica se tornou referência na região.
+            </p>
 
-    <p>Pelle Bella<br>
-    Estética & Beleza</p>
+            <p>
+             Ao longo dos anos, investimos constantemente em tecnologia, formação e atualização de nossa equipe, garantindo que nossos clientes tenham acesso aos tratamentos mais modernos e eficazes do mercado.
+            </p>
 
+            <p>
+             Nossa missão é proporcionar bem-estar e autoestima através de tratamentos personalizados, sempre respeitando a individualidade de cada cliente.
+            </p>
 
-    <h3>Pelle Bella</h3>
-    <a>O Studio Lidiane Camila é fruto da paixão de sua fundadora pelos cuidados corporais. Com formação especializada em massoterapia e técnicas avançadas de estética corporal, Lidiane Camila construiu um espaço dedicado ao bem-estar e relaxamento.</a>
+            <div class="sobre-numeros">
 
-    <a>Ao longo dos anos, investimos constantemente em tecnologia, formação e atualização de nossa equipe, garantindo que nossos clientes tenham acesso aos tratamentos mais modernos e eficazes do mercado.</a>
+                <div>
+                    <h3>10+</h3>
+                    <span>Anos</span>
+                </div>
 
-    <a>Trabalhamos com as melhores técnicas de drenagem linfática e massagem modeladora, sempre buscando resultados visíveis e satisfação total de nossos clientes.</a><br> 
+                <div>
+                    <h3>5000+</h3>
+                    <span>Clientes</span>
+                </div>
 
-    <p>10+ Anos</p>
-    <p>5000+ Clientes</p>
-    <p>15+ Certificações</p><br>
+                <div>
+                    <h3>15+</h3>
+                    <span>Certificações</span>
+                </div>
 
-    <p>Studio Lidiane Camila<br>
-    Beleza & Bem-Estar</p>
+            </div>
+        </div>
 
+        <div class="sobre-card card-bege">
+            <div class="sobre-logo">PB</div>
+
+            <h3 style="color:#b58b2d">Pelle Bella</h3>
+            <p>Estética & Beleza</p>
+        </div>
+
+    </div>
+
+    <!-- BLOCO 2 -->
+    <div class="sobre-grid reverse">
+
+        <div class="sobre-card card-rosa">
+            <div class="sobre-logo">LC</div>
+
+            <h3 style="color: #d86d9f;">Studio Lidiane Camila</h3>
+            <p>Beleza & Bem-Estar</p>
+        </div>
+
+        <div class="sobre-texto">
+            <h2 class="titulo-rosa">Studio Lidiane Camila</h2>
+
+            <p>
+               O Studio Lidiane Camila é fruto da paixão de sua fundadora pelos cuidados corporais. Com formação especializada em massoterapia e técnicas avançadas de estética corporal, Lidiane Camila construiu um espaço dedicado ao bem-estar e relaxamento.
+            </p>
+
+            <p>
+               Nosso diferencial está no atendimento personalizado e na atenção aos detalhes. Cada cliente é único e recebe um tratamento desenvolvido especialmente para suas necessidades e objetivos.
+            </p>
+
+            <p>
+               Trabalhamos com as melhores técnicas de drenagem linfática e massagem modeladora, sempre buscando resultados visíveis e satisfação total de nossos clientes.
+            </p>
+
+            <div class="sobre-numeros rosa">
+
+                <div>
+                    <h3>8+</h3>
+                    <span>Anos</span>
+                </div>
+
+                <div>
+                    <h3>3000+</h3>
+                    <span>Clientes</span>
+                </div>
+
+                <div>
+                    <h3>10+</h3>
+                    <span>Certificações</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
      <footer>
   <section>
@@ -94,6 +477,8 @@
       <li><a href="#">Extensão de Cílios</a></li>
     </ul>
   </section>
+
+  
 
   <section>
     <h2>Contato</h2>
