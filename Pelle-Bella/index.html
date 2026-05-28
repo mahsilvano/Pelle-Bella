@@ -1,37 +1,314 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Pelle Bella</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pelle Bella | Clínica de Estética</title>
+  <meta name="description" content="Pelle Bella e Studio Lidiane Camila - Sua clínica de estética completa. Tratamentos faciais, corporais e muito mais.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
-    <header class="header">
-                <a href="index.html" class="logo-link">
-                    <span class="brand-title">Pelle Bella</span>
-                    <span class="brand-sub">ESTÉTICA & BELEZA</span>
-                </a>
-            
+  <!-- Header -->
+  <header class="header">
 
-            <nav class="nav-bar" role="navigation">
-                <ul class="nav-seccoes">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="limpeza-de-pele.html">Serviços</a></li>
-                    <li><a href="resultados.html">Resultados</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
+        <a href="index.html" class="logo-link">
+            <span class="brand-title">Pelle Bella</span>
+            <span class="brand-sub">ESTÉTICA & BELEZA</span>
+        </a>
 
-                <button><a class="cta-color" href="contato.html">Agendar Consulta</a></button>
+        <nav class="nav-bar">
+
+            <ul class="nav-seccoes">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+        </nav>
+
+        <button>
+            <a href="contato.html">Agendar Consulta</a>
+        </button>
+
     </header>
 
-    <footer>
+
+  <main>
+    <!-- Hero Carousel -->
+    <section class="hero">
+      <div class="carousel">
+        <div class="carousel-slides">
+          <div class="carousel-slide active" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+            <div class="slide-content">
+              <span class="slide-badge">Promoção do Mês</span>
+              <h1 class="slide-title">Limpeza de Pele + Hidratação</h1>
+              <p class="slide-description">Renove sua pele com nosso tratamento completo. Limpeza profunda + máscara hidratante + protetor solar.</p>
+              <div class="slide-price">
+                <span class="price-from">De R$ 280</span>
+                <span class="price-to">Por R$ 199</span>
+              </div>
+              <a href="https://wa.me/5511999999999" class="btn btn-primary btn-lg">Agendar Agora</a>
+            </div>
+          </div>
+          
+          <div class="carousel-slide" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a1a2e 100%);">
+            <div class="slide-content">
+              <span class="slide-badge">Novidade</span>
+              <h1 class="slide-title">Microagulhamento com Drug Delivery</h1>
+              <p class="slide-description">Tecnologia avançada para rejuvenescimento facial. Resultados visíveis desde a primeira sessão.</p>
+              <div class="slide-price">
+                <span class="price-from">De R$ 450</span>
+                <span class="price-to">Por R$ 350</span>
+              </div>
+              <a href="https://wa.me/5511999999999" class="btn btn-primary btn-lg">Agendar Agora</a>
+            </div>
+          </div>
+          
+          <div class="carousel-slide" style="background: linear-gradient(135deg, #1e3a5f 0%, #0d1b2a 100%);">
+            <div class="slide-content">
+              <span class="slide-badge">Pacote Especial</span>
+              <h1 class="slide-title">Drenagem Linfática - Pacote 10 Sessões</h1>
+              <p class="slide-description">Elimine o inchaço e a retenção de líquidos. Ideal para pós-operatório e bem-estar.</p>
+              <div class="slide-price">
+                <span class="price-from">De R$ 1.500</span>
+                <span class="price-to">Por R$ 1.100</span>
+              </div>
+              <a href="https://wa.me/5511999999999" class="btn btn-primary btn-lg">Agendar Agora</a>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-btn carousel-prev" aria-label="Slide anterior">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-next" aria-label="Próximo slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+        
+        <div class="carousel-dots">
+          <button class="carousel-dot active" aria-label="Ir para slide 1"></button>
+          <button class="carousel-dot" aria-label="Ir para slide 2"></button>
+          <button class="carousel-dot" aria-label="Ir para slide 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Nossos Serviços</span>
+          <h2 class="section-title">Tratamentos Especializados</h2>
+          <p class="section-description">Oferecemos uma ampla variedade de tratamentos estéticos para realçar sua beleza natural</p>
+        </div>
+        
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </div>
+            <h3 class="service-title">Limpeza de Pele</h3>
+            <p class="service-description">Remoção de impurezas, cravos e células mortas para uma pele renovada e radiante.</p>
+            <span class="service-brand brand-pelle">Pelle Bella</span>
+            <a href="#" class="service-link">
+              Saiba mais
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+            </div>
+            <h3 class="service-title">Peeling Químico</h3>
+            <p class="service-description">Renovação celular para tratamento de manchas, acne e sinais de envelhecimento.</p>
+            <span class="service-brand brand-pelle">Pelle Bella</span>
+            <a href="#" class="service-link">
+              Saiba mais
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/></svg>
+            </div>
+            <h3 class="service-title">Microagulhamento</h3>
+            <p class="service-description">Estimula a produção de colágeno para rejuvenescimento e tratamento de cicatrizes.</p>
+            <span class="service-brand brand-pelle">Pelle Bella</span>
+            <a href="#" class="service-link">
+              Saiba mais
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <h3 class="service-title">Radiofrequência</h3>
+            <p class="service-description">Tecnologia que promove firmeza e contorno facial através do aquecimento profundo.</p>
+            <span class="service-brand brand-studio">Studio Lidiane Camila</span>
+            <a href="#" class="service-link">
+              Saiba mais
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1"/><path d="m13 12-4.5-2.5"/></svg>
+            </div>
+            <h3 class="service-title">Drenagem Linfática</h3>
+            <p class="service-description">Massagem especializada para eliminar toxinas, reduzir inchaço e melhorar a circulação.</p>
+            <span class="service-brand brand-studio">Studio Lidiane Camila</span>
+            <a href="#" class="service-link">
+              Saiba mais
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            </div>
+            <h3 class="service-title">Massagem Modeladora</h3>
+            <p class="service-description">Técnica intensiva para modelar o corpo, reduzir medidas e combater a celulite.</p>
+            <span class="service-brand brand-studio">Studio Lidiane Camila</span>
+            <a href="#" class="service-link">
+              Saiba mais
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="about" id="sobre">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-images">
+            <div class="about-image about-image-1">
+              <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=400&h=500&fit=crop" alt="Ambiente da clínica Pelle Bella">
+            </div>
+            <div class="about-image about-image-2">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&h=400&fit=crop" alt="Tratamento estético sendo realizado">
+            </div>
+          </div>
+          
+          <div class="about-content">
+            <span class="section-badge">Sobre Nós</span>
+            <h2 class="section-title">Duas Marcas, Um Compromisso com Sua Beleza</h2>
+            <p class="about-text">
+              A <strong>Pelle Bella</strong> nasceu da paixão por realçar a beleza natural de cada pessoa. 
+              Especializada em tratamentos faciais avançados, utilizamos as tecnologias mais modernas 
+              do mercado para proporcionar resultados excepcionais.
+            </p>
+            <p class="about-text">
+              O <strong>Studio Lidiane Camila</strong> complementa nossa expertise com tratamentos 
+              corporais personalizados, focados no bem-estar e na autoestima de nossos clientes.
+            </p>
+            
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Anos de Experiência</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">5.000+</span>
+                <span class="stat-label">Clientes Satisfeitos</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Tratamentos</span>
+              </div>
+            </div>
+            
+            <a href="#sobre" class="btn btn-outline">Conheça Nossa História</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Preview -->
+    <section class="results" id="resultados">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Resultados</span>
+          <h2 class="section-title">Transformações Reais</h2>
+          <p class="section-description">Veja os resultados alcançados por nossos clientes com nossos tratamentos</p>
+        </div>
+        
+        <div class="results-grid">
+          <div class="result-card">
+            <div class="result-images">
+              <div class="result-image">
+                <span class="result-label">Antes</span>
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=300&h=300&fit=crop" alt="Antes do tratamento">
+              </div>
+              <div class="result-image">
+                <span class="result-label label-after">Depois</span>
+                <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=300&h=300&fit=crop" alt="Depois do tratamento">
+              </div>
+            </div>
+            <div class="result-info">
+              <h3 class="result-title">Limpeza de Pele Profunda</h3>
+              <p class="result-sessions">4 sessões</p>
+            </div>
+          </div>
+          
+          <div class="result-card">
+            <div class="result-images">
+              <div class="result-image">
+                <span class="result-label">Antes</span>
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=300&h=300&fit=crop" alt="Antes do tratamento">
+              </div>
+              <div class="result-image">
+                <span class="result-label label-after">Depois</span>
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=300&h=300&fit=crop" alt="Depois do tratamento">
+              </div>
+            </div>
+            <div class="result-info">
+              <h3 class="result-title">Microagulhamento</h3>
+              <p class="result-sessions">6 sessões</p>
+            </div>
+          </div>
+          
+          <div class="result-card">
+            <div class="result-images">
+              <div class="result-image">
+                <span class="result-label">Antes</span>
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" alt="Antes do tratamento">
+              </div>
+              <div class="result-image">
+                <span class="result-label label-after">Depois</span>
+                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300&h=300&fit=crop" alt="Depois do tratamento">
+              </div>
+            </div>
+            <div class="result-info">
+              <h3 class="result-title">Peeling + Hidratação</h3>
+              <p class="result-sessions">3 sessões</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="results-cta">
+          <a href="#resultados" class="btn btn-outline">Ver Todos os Resultados</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+<footer>
   <section>
     <h2>Pelle Bella</h2>
     <p>Sua clínica de estética completa. Tratamentos de qualidade com profissionais certificados.</p>
@@ -47,7 +324,7 @@
   <section>
     <h2>Serviços</h2>
     <ul>
-      <li><a href="limpeza-de-pele.html">Limpeza de Pele</a></li>
+      <li><a href="#">Limpeza de Pele</a></li>
       <li><a href="#">Depilação a Laser com Luz Pulsada</a></li>
       <li><a href="#">Depilação com Cera</a></li>
       <li><a href="#">Design de Sombrancelha</a></li>
@@ -64,11 +341,14 @@
     <p>Rua Exemplo, 123 - Centro, Cidade - Estado</p>
   </section>
   <p class="footer-copyright">&copy; 2026 Pelle Bella & Studio Lidiane Camila. todos os direitos reservados</p>
-  <aside>
-    <a href="#"><img src="whatsapp-logo.png" alt="WhatsApp"></a>
-  </aside>
+
 </footer>
 
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/5511999999999" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
 
+  <script src="script.js"></script>
 </body>
 </html>
