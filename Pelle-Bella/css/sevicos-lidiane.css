@@ -1,0 +1,254 @@
+ *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .logo-link{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title{
+            font-size: 32px;
+            color: #b98a18;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .brand-sub{
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #666;
+        }
+
+        .nav-seccoes{
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-seccoes a{
+            color: #1d1d1d;
+            font-weight: 500;
+        }
+
+        .nav-seccoes a:hover{
+            color: #b98a18;
+        }
+
+        .nav-seccoes li{
+    position: relative;
+}
+
+.menu-dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 0;
+    display: none;
+    z-index: 9999;
+}
+
+.menu-dropdown li{
+    padding: 12px 20px;
+}
+
+.menu-dropdown li:hover{
+    background-color: #f5f5f5;
+}
+
+.dropdown:hover .menu-dropdown{
+    display: block;
+}
+
+        button{
+            padding: 14px 24px;
+            background-color: lab(51.5806% 48.0324 -9.28907);;
+        } 
+
+        #btn-rosa{
+            background-color:lab(51.5806% 48.0324 -9.28907);
+        }
+
+        button a{
+            color: white;
+            font-weight: bold;
+        } 
+
+        main{
+            width: 90%;
+            margin: auto;
+            padding: 80px 0;
+        }
+
+        main small{
+            color:lab(51.5806% 48.0324 -9.28907);
+            font-size: 14px;
+        }
+
+
+        main p{
+            max-width: 800px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .main-info{
+            display: flex;
+            align-items: baseline;
+            gap: 25px;
+            margin:0 ;
+        }
+        .main-info p{
+            display: flex;
+            align-items: center;
+        }
+
+        section{
+            width: 90%;
+            margin: auto;
+            margin-bottom: 90px;
+        }
+
+        .beneficios h2{
+            font-size: 30px;
+            margin-bottom: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .beneficios ul{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+        }
+
+        .beneficios li{
+            background-color: white;
+            border: 1px solid;
+            border-color:lab(87.6% 19.7857 -3.75594);
+            border-radius: 10px;
+            padding: 20px;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .material-symbols-outlined{
+            color:lab(51.5806% 48.0324 -9.28907);
+        }
+
+        .profissional{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        aside small{
+            color:lab(51.5806% 48.0324 -9.28907);
+            font-size: 14px;
+        }
+
+        aside h2{
+            font-size: 30px;
+            margin: 20px 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        article{
+            background-color: white;
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid;
+            border-color:lab(87.6% 19.7857 -3.75594);
+        }
+
+        article h3{
+            margin-bottom: 20px;
+        }
+
+        article li{
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .equipamentos small{
+            color:lab(51.5806% 48.0324 -9.28907);
+            font-size: 14px;
+        }
+
+        .equipamentos h2{
+            font-size: 30px;
+            margin: 20px 0 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .equipamentos ul{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .equipamentos li{
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+           border: 1px solid;
+            border-color:lab(87.6% 19.7857 -3.75594);
+        }
+
+        .equipamentos h3{
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+@media (max-width:1024px){
+    .profissional{
+        align-items: center;
+    }
+
+    .equipamentos ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width:768px){
+    .profissional{
+        align-items: center;
+    }
+
+    .equipamentos ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width:480px){
+
+    .beneficios ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .profissional{    
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 50px;
+    align-items: center;
+    }
+
+    .equipamentos ul{
+        grid-template-columns: repeat(1fr);
+    }
+}

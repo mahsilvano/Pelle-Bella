@@ -1,0 +1,224 @@
+/* =============================================
+   MENU.CSS — Pelle Bella
+   Importar em todas as páginas
+   ============================================= */
+
+/* ── Container do Header ── */
+header,
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: color-mix(in oklab, var(--background) 88%, var(--secondary));
+    border-bottom: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+}
+
+/* ── Logo ── */
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.brand-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    color: var(--gold-dark);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.brand-sub {
+    font-size: 10px;
+    letter-spacing: 1.6px;
+    color: var(--muted-foreground);
+    text-transform: uppercase;
+    margin-top: 2px;
+    font-weight: 600;
+}
+
+/* ── Nav ── */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-seccoes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-seccoes a {
+    text-decoration: none;
+    color: color-mix(in oklab, var(--foreground) 80%, transparent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-seccoes a:hover {
+    color: var(--primary);
+}
+
+/* ── Dropdown Serviços ── */
+.dropdown {
+    position: relative;
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background);
+    border: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+    border-radius: 8px;
+    padding: 8px 0;
+    min-width: 220px;
+    box-shadow: 0 8px 24px color-mix(in oklab, var(--foreground) 10%, transparent);
+    z-index: 100;
+    list-style: none;
+    margin: 0;
+}
+
+.menu-dropdown li a {
+    display: block;
+    padding: 10px 18px;
+    color: color-mix(in oklab, var(--foreground) 80%, transparent);
+    font-size: 13px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-dropdown li a:hover {
+    background-color: color-mix(in oklab, var(--gold-light) 30%, transparent);
+    color: var(--gold-dark);
+}
+
+/* Abre no hover (desktop) */
+.dropdown:hover .menu-dropdown {
+    display: block;
+}
+
+/* ── Botão Agendar (desktop) ── */
+.btn-agendar {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 14px;
+    background-color: var(--primary);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-agendar:hover {
+    background-color: color-mix(in oklab, var(--gold-dark) 90%, var(--gold-light));
+    transform: translateY(-2px);
+}
+
+.btn-agendar a {
+    text-decoration: none;
+    color: var(--background);
+}
+
+/* ── Hamburguer (oculto no desktop) ── */
+.menu-toggle {
+    display: none;
+}
+
+.btn-mobile {
+    display: none;
+}
+
+/* =============================================
+   RESPONSIVO — TABLET (≤ 1024px)
+   ============================================= */
+@media (max-width: 1024px) {
+    .nav-seccoes {
+        gap: 15px;
+    }
+}
+
+/* =============================================
+   RESPONSIVO — CELULAR (≤ 768px)
+   ============================================= */
+@media (max-width: 768px) {
+
+    header, .header {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--gold-dark);
+        font-size: 28px;
+        cursor: pointer;
+        width: auto;
+        padding: 0;
+    }
+
+    .btn-desktop {
+        display: none;
+    }
+
+    .nav-bar {
+        display: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav-bar.ativo {
+        display: block;
+    }
+
+    .nav-seccoes {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Dropdown vira estático no mobile */
+    .dropdown:hover .menu-dropdown {
+        display: none;
+    }
+
+    .menu-dropdown {
+        position: static;
+        border: none;
+        box-shadow: none;
+        min-width: unset;
+        padding: 0;
+        margin-top: 8px;
+    }
+
+    .menu-dropdown.aberto {
+        display: block;
+    }
+
+    .btn-mobile {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .btn-agendar-mobile {
+        display: block;
+        background-color: var(--gold-dark);
+        color: white !important;
+        padding: 12px;
+        border-radius: 25px;
+        text-align: center;
+    }
+}

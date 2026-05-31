@@ -1,0 +1,630 @@
+@supports (color:lab(0% 0 0)) {
+    :root {
+        /* Cor de fundo do site */
+        --background: lab(98.84% .0000298023 -.0000119209);
+        /* Cor padrão do texto (foreground) */
+        --foreground: lab(7.22637% -.0000149012 0);
+        /* Cor dos cartões / blocos */
+        --card: lab(100% 0 0);
+        /* Cor do texto dentro de cartões */
+        --card-foreground: lab(7.22637% -.0000149012 0);
+        /* Cor de popovers (modais/flutuantes) */
+        --popover: lab(100% 0 0);
+        /* Cor do texto dentro de popovers */
+        --popover-foreground: lab(7.22637% -.0000149012 0);
+        /* Cor primária usada em destaques */
+        --primary: lab(71.2019% 8.24577 52.3464);
+        /* Cor do texto quando sobre o primário */
+        --primary-foreground: lab(7.27453% 1.01619 6.17766);
+        /* Cor secundária de apoio */
+        --secondary: lab(96.5601% .286847 3.81331);
+        /* Cor do texto quando sobre a secundária */
+        --secondary-foreground: lab(18.8% 0 0);
+        /* Cor para elementos menos destacados (muted) */
+        --muted: lab(95.36% 0 0);
+        /* Texto para elementos muted */
+        --muted-foreground: lab(42% 0 0);
+        /* Cor de acento (usada para contrastes) */
+        --accent: lab(82.8129% 4.16073 32.279);
+        /* Texto sobre o acento */
+        --accent-foreground: lab(13% 0 0);
+        /* Cor para estados destrutivos (ex: deletar) */
+        --destructive: lab(48.4493% 77.4328 61.5452);
+        /* Texto sobre estados destrutivos */
+        --destructive-foreground: lab(48.4493% 77.4328 61.5452);
+        /* Cor de bordas */
+        --border: lab(88.4762% .642717 7.67483);
+        /* Cor de fundo de inputs */
+        --input: lab(90.72% .0000298023 -.0000119209);
+        /* Cor para “ring” de foco */
+        --ring: lab(71.2019% 8.24577 52.3464);
+        /* Cores para gráficos (diversas séries) */
+        --chart-1: lab(71.2019% 8.24577 52.3464);
+        --chart-2: lab(55.0223% -41.0774 -3.90277);
+        --chart-3: lab(30.372% -13.1853 -18.7887);
+        --chart-4: lab(80.1641% 16.6016 99.2089);
+        --chart-5: lab(72.7183% 31.8672 97.9407);
+        /* Cores específicas da sidebar */
+        --sidebar: lab(98.26% 0 0);
+        --sidebar-foreground: lab(2.75381% 0 0);
+        --sidebar-primary: lab(71.2019% 8.24577 52.3464);
+        --sidebar-primary-foreground: lab(7.27453% 1.01619 6.17766);
+        --sidebar-accent: lab(96.52% -.0000298023 .0000119209);
+        --sidebar-accent-foreground: lab(7.78201% -.0000149012 0);
+        --sidebar-border: lab(90.952% 0 -.0000119209);
+        --sidebar-ring: lab(66.128% -.0000298023 .0000119209);
+        /* Paleta ouro/rosa personalizada */
+        --gold: lab(71.2019% 8.24577 52.3464);
+        --gold-light: lab(82.8129% 4.16073 32.279);
+        --gold-dark: lab(53.7345% 9.37668 56.8433);
+        --pink: lab(69.3922% 38.9471 -7.4692);
+        --pink-light: lab(87.6% 19.7857 -3.75594);
+        --pink-dark: lab(51.5806% 48.0324 -9.28907);
+    }
+}
+
+
+
+body {
+    /* Define o fundo do site usando a variável --background */
+    background-color: var(--background);
+    /* Define a cor padrão do texto */
+    color: var(--foreground);
+}
+
+
+/* Cabeçalho do site */
+header {
+    /* Utiliza flexbox para alinhar logo / nav / ações */
+    display: flex;
+    /* Mistura a cor de fundo base com a secundária para acabamento */
+    background-color: color-mix(in oklab, var(--background) 88%, var(--secondary));
+    /* Linha inferior como separador usando mistura para transparência */
+    border-bottom: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+    /* Espaçamento interno do header (vertical horizontal) */
+    padding: 12px 16px;
+    /* Garante comportamento flex (duplica display: flex é redundante, mas mantido) */
+    justify-content: space-between; /* logo à esquerda, nav ocupa espaço e botão à direita */
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+
+/* Navegação (bloco pai) */
+nav {
+    /* Define nav como bloco para controlar margens */
+    display: block;
+    /* Espaçamento superior da nav */
+    margin-top: 10px;
+}
+
+/* Estilo base para botões */
+button{
+    /* Fonte monoespaçada para o botão */
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* Tamanho da fonte do botão */
+    font-size: 14px;
+    /* Cor de fundo do botão usando varável gold-dark */
+    background-color: var(--primary);
+    /* Remove borda padrão */
+    border: none;
+    /* Espaçamento interno do botão (vertical horizontal) */
+    padding: 8px 16px;
+    /* Arredonda as extremidades do botão */
+    border-radius: 24px;
+    /* Cursor de ponteiro ao passar */
+    cursor: pointer;
+    /* Transições suaves para cor e transformação */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Estado hover do botão */
+button:hover {
+    /* Clareia ligeiramente a cor do botão usando color-mix */
+    background-color: color-mix(in oklab, var(--gold-dark) 90%, var(--gold-light));
+    /* Move o botão para cima 2px para efeito de elevação */
+    transform: translateY(-2px);
+}
+
+
+/* Estilo base para título principal (h1) */
+/* Usa Playfair Display para sensação serifada e elegante */
+h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 8px;
+}
+
+
+/* Links padrão */
+a {
+    /* Remove sublinhado padrão */
+    text-decoration: none;
+    /* Usa mesma família monoespaçada dos botões */
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* Transição suave para mudança de cor */
+    transition: color 0.3s ease;
+}
+
+
+
+footer {
+    background-color: var(--sidebar-foreground);
+    color: var(--sidebar);
+    padding: 60px 40px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+footer section {
+  flex: 1 1 220px;
+}
+
+footer h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--gold-dark);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: color-mix(in oklab, var(--sidebar) 60%, transparent 40%);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  color: color-mix(in oklab, var(--sidebar) 60%, transparent 40%);
+  margin-bottom: 8px;
+}
+
+footer ul li a {
+  color: color-mix(in oklab, var(--sidebar) 60%, transparent 40%);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: var(--gold-dark);
+}
+
+footer a i {
+  color: var(--sidebar);
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+footer a i:hover {
+  color: var(--gold-dark);
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+footer aside {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+footer aside img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+footer .footer-copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  color: color-mix(in oklab, var(--sidebar) 70%, transparent 30%);
+  font-size: 14px;
+  order: 999;
+}
+
+.note-card {
+  background-color: color-mix(in oklab, var(--muted) 80%, var(--border));
+  padding: 24px 32px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.note-card p {
+  color: color-mix(in oklab, var(--foreground) 65%, transparent 35%);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.note-card strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+/* ===== Navegação principal ===== */
+
+
+.nav-seccoes {
+    /* Remove marcadores de lista */
+    list-style: none;
+    /* Zera margens externas */
+    margin: 0;
+    /* Zera padding interno */
+    padding: 0;
+    /* Exibe itens em linha com flexbox */
+    display: flex;
+    /* Espaçamento entre itens */
+    gap: 20px; /* espaçamento uniforme entre itens */
+    /* Alinha verticalmente ao centro */
+    align-items: center;
+}
+
+.nav-bar {
+    /* Remove margens/paddings padrão */
+    margin: 0;
+    padding: 0;
+    /* Espaçamento lateral para separar do restante */
+    margin-right: 20px;
+    /* Flexbox para centralizar conteúdo da barra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-seccoes a {
+    /* Remove sublinhado de links das seções */
+    text-decoration: none;
+    /* Cor mais suave para itens de navegação */
+    color: color-mix(in oklab, var(--foreground) 80%, transparent);
+    /* Mesma família monoespaçada usada globalmente */
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* Tamanho da fonte dos links de navegação */
+    font-size: 14px;
+}
+
+/* Hover de links de navegação para indicar interatividade */
+.nav-seccoes a:hover {
+    color: var(--primary);
+}
+
+
+.logo-link {
+    /* Remove sublinhado do link da logo */
+    text-decoration: none;
+    /* Herdar cor do contexto */
+    color: inherit;
+    /* Utiliza inline-flex para empilhar título e subtítulo */
+    display: inline-flex;
+    /* Organiza os itens verticalmente */
+    flex-direction: column;
+    /* Alinha conteúdo à esquerda */
+    align-items: flex-start;
+    /* Pequeno espaçamento entre título e subtítulo */
+    gap: 2px;
+}
+.brand-title {
+    /* Fonte serif para o título da marca */
+    font-family: "Playfair Display", Georgia, serif;
+    /* Tamanho maior para destaque */
+    font-size: 28px;
+    /* Cor dourada escura */
+    color: var(--gold-dark);
+    /* Peso da fonte */
+    font-weight: 700;
+    /* Altura de linha compacta */
+    line-height: 1;
+}
+.brand-sub {
+    /* Subtítulo menor e mais discreto */
+    font-size: 10px;
+    /* Espaçamento entre letras para estilo */
+    letter-spacing: 1.6px;
+    /* Cor mais suave */
+    color: var(--muted-foreground);
+    /* Letras em maiúsculas */
+    text-transform: uppercase;
+    /* Pequeno deslocamento superior */
+    margin-top: 2px;
+    /* Peso intermediário */
+    font-weight: 600;
+}
+
+.cta-color {
+    /* Remove sublinhado em chamadas para ação */
+    text-decoration: none;
+    /* Força o texto para ficar como o fundo (para botões escuros) */
+    color: var(--background);
+}
+
+.page-hero {
+    background-color: color-mix(in oklab, var(--gold-light) 50%, transparent);
+    padding: 80px 24px;
+    text-align: center;
+    color: var(--foreground);
+}
+
+.page-hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: var(--foreground);
+    font-size: clamp(40px, 5vw, 60px);
+    margin: 20px auto 20px;
+    max-width: 900px;
+    line-height: 1.05;
+}
+
+.page-hero h3 {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    color: var(--gold);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+}
+
+.page-hero p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: color-mix(in oklab, var(--foreground) 60%, transparent 40%);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.button-resultados-pb {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 14px;
+    background-color: color-mix(in oklab, var(--muted-foreground) 15%, var(--background) 85%);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+
+}
+
+.button-resultados-pb:hover {
+    /* Clareia ligeiramente a cor do botão usando color-mix */
+    background-color: var(--);
+    /* Move o botão para cima 2px para efeito de elevação */
+    transform: translateY(-2px);
+}
+
+.button-resultados-slc {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 14px;
+    background-color: color-mix(in oklab, var(--muted-foreground) 15%, var(--background) 85%);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+
+}
+
+.button-resultados-slc:hover {
+    /* Clareia ligeiramente a cor do botão usando color-mix */
+    background-color: var(--pink-dark);
+    /* Move o botão para cima 2px para efeito de elevação */
+    transform: translateY(-2px);
+}
+
+.background-button-resultados {
+    background-color: color-mix(in oklab, var(--muted-foreground) 15%, var(--background) 85%);
+    border-radius: 40px;
+    padding: 5px 5px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.div-resultados {
+    background-color: var(--background);
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.footer-h2-2 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--pink-dark);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+html,
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.menu-toggle{
+    display:none;
+}
+
+/* TABLETS */
+@media (max-width: 1024px){
+
+    .beneficios ul,
+    .equipamentos ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .profissional{
+        grid-template-columns: 1fr;
+    }
+
+    .nav-seccoes{
+        gap: 15px;
+    }
+}
+
+/* CELULARES */
+
+.menu-toggle{
+    display: none;
+}
+
+.btn-mobile{
+    display: none;
+}
+
+/* TABLETS */
+@media (max-width:1024px){
+
+    .beneficios ul,
+    .equipamentos ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .profissional{
+        grid-template-columns: 3fr;
+    }
+
+}
+
+/* CELULAR */
+@media (max-width:768px){
+
+    header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+    }
+
+    .menu-toggle{
+        display:block;
+        background:none;
+        border:none;
+        color:#b98a18;
+        font-size:28px;
+        cursor:pointer;
+        width:auto;
+        padding:0;
+    }
+
+    .btn-desktop{
+        display:none;
+    }
+
+    .nav-bar{
+        display:none;
+        width:100%;
+        margin-top:15px;
+    }
+
+    .nav-bar.ativo{
+        display:block;
+    }
+
+    .nav-seccoes{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .btn-mobile{
+        display:block;
+        margin-top:15px;
+    }
+
+    .btn-agendar-mobile{
+        display:block;
+        background:#b98a18;
+        color:white !important;
+        padding:12px;
+        border-radius:25px;
+        text-align:center;
+    }
+
+    .menu-dropdown{
+        display:none;
+        position:static;
+        width:100%;
+        border:none;
+        box-shadow:none;
+        margin-top:10px;
+    }
+
+    .menu-dropdown.aberto{
+        display:block;
+    }
+
+    .main-info{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+
+
+    .profissional{
+        grid-template-columns:1fr;
+    }
+
+    section,
+    main{
+        width:95%;
+    }
+
+        section,
+    main{
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .beneficios,
+    .equipamentos,
+    .profissional{
+        width: 100%;
+    }
+
+
+
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width:480px){
+
+    h1{
+        font-size:32px;
+    }
+
+    .beneficios h2,
+    .equipamentos h2,
+    aside h2{
+        font-size:25px;
+    }
+
+    article{
+        padding:20px;
+    }
+
+        section,
+    main{
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .beneficios,
+    .equipamentos,
+    .profissional{
+        width: 100%;
+    }
+
+}
