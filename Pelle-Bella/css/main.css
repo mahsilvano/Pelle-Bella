@@ -447,3 +447,29 @@ footer .footer-copyright {
   font-size: 18px;
   margin-bottom: 10px;
 }
+
+/* ===== Results Section Alignment ===== */
+.resultados-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .resultados-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+}
+
+.resultados-section .results-grid {
+  display: contents;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
